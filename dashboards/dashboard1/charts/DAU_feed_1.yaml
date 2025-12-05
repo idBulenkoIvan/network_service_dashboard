@@ -1,0 +1,130 @@
+slice_name: DAU (feed)
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 1__table
+  viz_type: echarts_timeseries_line
+  slice_id: 1
+  x_axis:
+    datasourceWarning: false
+    expressionType: SQL
+    label: time
+    sqlExpression: date(time)
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "\u0423\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u043E\
+      \u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"
+    optionName: metric_qrz1oe5vsf_641f99ncjym
+    sqlExpression: uniqExact(user_id)
+  groupby: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_yxrgljrrip_g8y98iagq3g
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: false
+  show_empty_columns: false
+  comparison_type: values
+  annotation_layers: []
+  forecastEnabled: false
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title: "\u0414\u0430\u0442\u0430"
+  x_axis_title_margin: 30
+  y_axis_title: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E"
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  time_shift_color: true
+  seriesType: line
+  only_total: true
+  area: false
+  opacity: 0.2
+  markerEnabled: true
+  markerSize: 6
+  zoomable: false
+  minorTicks: false
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  showTooltipTotal: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 1
+query_context: "{\"datasource\":{\"id\":1,\"type\":\"table\"},\"force\":false,\"queries\"\
+  :[{\"filters\":[{\"col\":\"time\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
+  }],\"extras\":{\"time_grain_sqla\":\"P1D\",\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"timeGrain\":\"P1D\",\"columnType\":\"BASE_AXIS\",\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"label\":\"time\",\"sqlExpression\":\"date(time)\"\
+  }],\"metrics\":[{\"aggregate\":null,\"column\":null,\"datasourceWarning\":false,\"\
+  expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u0423\u043D\u0438\u043A\
+  \u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\
+  \u0442\u0435\u043B\u0438\",\"optionName\":\"metric_qrz1oe5vsf_641f99ncjym\",\"sqlExpression\"\
+  :\"uniqExact(user_id)\"}],\"orderby\":[[{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u0423\u043D\
+  \u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\
+  \u0432\u0430\u0442\u0435\u043B\u0438\",\"optionName\":\"metric_qrz1oe5vsf_641f99ncjym\"\
+  ,\"sqlExpression\":\"uniqExact(user_id)\"},false]],\"annotation_layers\":[],\"row_limit\"\
+  :10000,\"series_columns\":[],\"series_limit\":0,\"order_desc\":true,\"url_params\"\
+  :{},\"custom_params\":{},\"custom_form_data\":{},\"time_offsets\":[],\"post_processing\"\
+  :[{\"operation\":\"pivot\",\"options\":{\"index\":[\"time\"],\"columns\":[],\"aggregates\"\
+  :{\"\u0423\u043D\u0438\u043A\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u043E\u043B\
+  \u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438\":{\"operator\":\"mean\"\
+  }},\"drop_missing_columns\":true}},{\"operation\":\"flatten\"}]}],\"form_data\"\
+  :{\"datasource\":\"1__table\",\"viz_type\":\"echarts_timeseries_line\",\"slice_id\"\
+  :1,\"x_axis\":{\"datasourceWarning\":false,\"expressionType\":\"SQL\",\"label\"\
+  :\"time\",\"sqlExpression\":\"date(time)\"},\"time_grain_sqla\":\"P1D\",\"x_axis_sort_asc\"\
+  :true,\"x_axis_sort_series\":\"name\",\"x_axis_sort_series_ascending\":true,\"metrics\"\
+  :[{\"aggregate\":null,\"column\":null,\"datasourceWarning\":false,\"expressionType\"\
+  :\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u0423\u043D\u0438\u043A\u0430\u043B\
+  \u044C\u043D\u044B\u0435 \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
+  \u043B\u0438\",\"optionName\":\"metric_qrz1oe5vsf_641f99ncjym\",\"sqlExpression\"\
+  :\"uniqExact(user_id)\"}],\"groupby\":[],\"adhoc_filters\":[{\"expressionType\"\
+  :\"SIMPLE\",\"subject\":\"time\",\"operator\":\"TEMPORAL_RANGE\",\"comparator\"\
+  :\"No filter\",\"clause\":\"WHERE\",\"sqlExpression\":null,\"isExtra\":false,\"\
+  isNew\":false,\"datasourceWarning\":false,\"filterOptionName\":\"filter_yxrgljrrip_g8y98iagq3g\"\
+  }],\"order_desc\":true,\"row_limit\":10000,\"truncate_metric\":false,\"show_empty_columns\"\
+  :false,\"comparison_type\":\"values\",\"annotation_layers\":[],\"forecastEnabled\"\
+  :false,\"forecastPeriods\":10,\"forecastInterval\":0.8,\"x_axis_title\":\"\u0414\
+  \u0430\u0442\u0430\",\"x_axis_title_margin\":30,\"y_axis_title\":\"\u041A\u043E\u043B\
+  \u0438\u0447\u0435\u0441\u0442\u0432\u043E\",\"y_axis_title_margin\":30,\"y_axis_title_position\"\
+  :\"Left\",\"sort_series_type\":\"sum\",\"color_scheme\":\"supersetColors\",\"time_shift_color\"\
+  :true,\"seriesType\":\"line\",\"only_total\":true,\"area\":false,\"opacity\":0.2,\"\
+  markerEnabled\":true,\"markerSize\":6,\"zoomable\":false,\"minorTicks\":false,\"\
+  show_legend\":true,\"legendType\":\"scroll\",\"legendOrientation\":\"top\",\"x_axis_time_format\"\
+  :\"smart_date\",\"rich_tooltip\":true,\"showTooltipTotal\":true,\"tooltipTimeFormat\"\
+  :\"smart_date\",\"y_axis_format\":\"SMART_NUMBER\",\"truncateXAxis\":true,\"y_axis_bounds\"\
+  :[null,null],\"extra_form_data\":{},\"dashboards\":[1],\"force\":false,\"result_format\"\
+  :\"json\",\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"\
+  full\"}"
+cache_timeout: null
+uuid: 10276cb0-c111-4cf3-b315-82a4910de1e5
+version: 1.0.0
+dataset_uuid: d658ec20-9b81-4129-b449-2d7666ad7cb6

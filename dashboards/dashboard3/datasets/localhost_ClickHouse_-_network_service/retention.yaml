@@ -1,0 +1,73 @@
+table_name: retention
+main_dttm_col: activity_date
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: null
+schema: network_service
+sql: "SELECT activity_date, source, users * 1.0 / MAX(users) OVER (PARTITION BY source)\
+  \ AS retention FROM (\n  SELECT activity_date, source, uniqExact(user_id) AS users\
+  \ FROM (\n    SELECT user_id, MIN(toDate(time)) AS start_date, source FROM feed_actions\
+  \ \n    GROUP BY user_id, source\n    HAVING start_date = toDate('2025-12-15')\n\
+  \  ) t1 \n  JOIN (\n    SELECT user_id, toDate(time) AS activity_date, source FROM\
+  \ feed_actions \n    WHERE toDate(time) >= toDate('2025-12-15')\n  ) t2\n  USING\
+  \ user_id\n  GROUP BY activity_date, source\n)\nORDER BY source ASC, activity_date\
+  \ ASC"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 90ac3f4a-7bd8-4e54-ba24-1664ffcfec9e
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: retention
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: activity_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: Date
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: source
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: String
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: babcb694-c583-4505-bad5-c1d355fb3f85

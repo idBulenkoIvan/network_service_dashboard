@@ -1,0 +1,113 @@
+slice_name: "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438\
+  \ \u043F\u043E \u043F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0435 (messages)"
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_line
+params:
+  datasource: 2__table
+  viz_type: echarts_timeseries_line
+  x_axis:
+    label: My column
+    sqlExpression: date(time)
+    expressionType: SQL
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - expressionType: SQL
+    sqlExpression: uniqExact(user_id)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: uniqExact(user_id)
+    optionName: metric_9frbny5c0f_45arolxr1k1
+  groupby:
+  - os
+  adhoc_filters:
+  - clause: WHERE
+    subject: time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_desc: true
+  row_limit: 10000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  x_axis_title: "\u0414\u0430\u0442\u0430"
+  x_axis_title_margin: 30
+  y_axis_title: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E"
+  y_axis_title_margin: 30
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  time_shift_color: true
+  seriesType: line
+  only_total: true
+  opacity: 0.2
+  markerEnabled: true
+  markerSize: 6
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  rich_tooltip: true
+  showTooltipTotal: true
+  tooltipTimeFormat: smart_date
+  y_axis_format: SMART_NUMBER
+  truncateXAxis: true
+  y_axis_bounds:
+  - null
+  - null
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: "{\"datasource\":{\"id\":2,\"type\":\"table\"},\"force\":false,\"queries\"\
+  :[{\"filters\":[{\"col\":\"time\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
+  }],\"extras\":{\"time_grain_sqla\":\"P1D\",\"having\":\"\",\"where\":\"\"},\"applied_time_extras\"\
+  :{},\"columns\":[{\"timeGrain\":\"P1D\",\"columnType\":\"BASE_AXIS\",\"label\":\"\
+  My column\",\"sqlExpression\":\"date(time)\",\"expressionType\":\"SQL\"},\"os\"\
+  ],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"uniqExact(user_id)\"\
+  ,\"column\":null,\"aggregate\":null,\"datasourceWarning\":false,\"hasCustomLabel\"\
+  :false,\"label\":\"uniqExact(user_id)\",\"optionName\":\"metric_9frbny5c0f_45arolxr1k1\"\
+  }],\"orderby\":[[{\"expressionType\":\"SQL\",\"sqlExpression\":\"uniqExact(user_id)\"\
+  ,\"column\":null,\"aggregate\":null,\"datasourceWarning\":false,\"hasCustomLabel\"\
+  :false,\"label\":\"uniqExact(user_id)\",\"optionName\":\"metric_9frbny5c0f_45arolxr1k1\"\
+  },false]],\"annotation_layers\":[],\"row_limit\":10000,\"series_columns\":[\"os\"\
+  ],\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"\
+  custom_form_data\":{},\"time_offsets\":[],\"post_processing\":[{\"operation\":\"\
+  pivot\",\"options\":{\"index\":[\"My column\"],\"columns\":[\"os\"],\"aggregates\"\
+  :{\"uniqExact(user_id)\":{\"operator\":\"mean\"}},\"drop_missing_columns\":false}},{\"\
+  operation\":\"rename\",\"options\":{\"columns\":{\"uniqExact(user_id)\":null},\"\
+  level\":0,\"inplace\":true}},{\"operation\":\"flatten\"}]}],\"form_data\":{\"datasource\"\
+  :\"2__table\",\"viz_type\":\"echarts_timeseries_line\",\"x_axis\":{\"label\":\"\
+  My column\",\"sqlExpression\":\"date(time)\",\"expressionType\":\"SQL\"},\"time_grain_sqla\"\
+  :\"P1D\",\"x_axis_sort_asc\":true,\"x_axis_sort_series\":\"name\",\"x_axis_sort_series_ascending\"\
+  :true,\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"uniqExact(user_id)\"\
+  ,\"column\":null,\"aggregate\":null,\"datasourceWarning\":false,\"hasCustomLabel\"\
+  :false,\"label\":\"uniqExact(user_id)\",\"optionName\":\"metric_9frbny5c0f_45arolxr1k1\"\
+  }],\"groupby\":[\"os\"],\"adhoc_filters\":[{\"clause\":\"WHERE\",\"subject\":\"\
+  time\",\"operator\":\"TEMPORAL_RANGE\",\"comparator\":\"No filter\",\"expressionType\"\
+  :\"SIMPLE\"}],\"order_desc\":true,\"row_limit\":10000,\"truncate_metric\":true,\"\
+  show_empty_columns\":true,\"comparison_type\":\"values\",\"annotation_layers\":[],\"\
+  forecastPeriods\":10,\"forecastInterval\":0.8,\"x_axis_title\":\"\u0414\u0430\u0442\
+  \u0430\",\"x_axis_title_margin\":30,\"y_axis_title\":\"\u041A\u043E\u043B\u0438\u0447\
+  \u0435\u0441\u0442\u0432\u043E\",\"y_axis_title_margin\":30,\"y_axis_title_position\"\
+  :\"Left\",\"sort_series_type\":\"sum\",\"color_scheme\":\"supersetColors\",\"time_shift_color\"\
+  :true,\"seriesType\":\"line\",\"only_total\":true,\"opacity\":0.2,\"markerEnabled\"\
+  :true,\"markerSize\":6,\"show_legend\":true,\"legendType\":\"scroll\",\"legendOrientation\"\
+  :\"top\",\"x_axis_time_format\":\"smart_date\",\"rich_tooltip\":true,\"showTooltipTotal\"\
+  :true,\"tooltipTimeFormat\":\"smart_date\",\"y_axis_format\":\"SMART_NUMBER\",\"\
+  truncateXAxis\":true,\"y_axis_bounds\":[null,null],\"extra_form_data\":{},\"dashboards\"\
+  :[2],\"force\":false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\"\
+  :\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: ae6e1ce0-57e9-4065-8136-c34fc985b647
+version: 1.0.0
+dataset_uuid: fe8dd305-207f-4cb9-8e2a-3b59a67a7049

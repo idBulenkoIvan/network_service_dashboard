@@ -1,0 +1,113 @@
+slice_name: "\u0422\u043E\u043F-100 \u043F\u043E\u0441\u0442\u043E\u0432"
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 1__table
+  viz_type: table
+  slice_id: 7
+  query_mode: aggregate
+  groupby:
+  - post_id
+  temporal_columns_lookup:
+    time: true
+  metrics:
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "\u041B\u0430\u0439\u043A\u0438"
+    optionName: metric_tgzfzbciy7_5x2anl9gima
+    sqlExpression: countIf(action='like')
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "\u041F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u044B"
+    optionName: metric_vm4nuvfqrno_5u1nt3lmrd
+    sqlExpression: countIf(action='view')
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: CTR
+    optionName: metric_mbgla15hjd_ngfytorirvh
+    sqlExpression: countIf(action='like') / countIf(action='view')
+  - aggregate: null
+    column: null
+    datasourceWarning: false
+    expressionType: SQL
+    hasCustomLabel: true
+    label: "\u041E\u0445\u0432\u0430\u0442"
+    optionName: metric_lo5szy0q74_9l6riaibf9j
+    sqlExpression: uniqExact(user_id)
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_by_cols: []
+  row_limit: 100
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 1
+query_context: "{\"datasource\":{\"id\":1,\"type\":\"table\"},\"force\":false,\"queries\"\
+  :[{\"filters\":[{\"col\":\"time\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
+  }],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\"\
+  :[\"post_id\"],\"metrics\":[{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u041B\u0430\
+  \u0439\u043A\u0438\",\"optionName\":\"metric_tgzfzbciy7_5x2anl9gima\",\"sqlExpression\"\
+  :\"countIf(action='like')\"},{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\
+  \u043E\u0441\u043C\u043E\u0442\u0440\u044B\",\"optionName\":\"metric_vm4nuvfqrno_5u1nt3lmrd\"\
+  ,\"sqlExpression\":\"countIf(action='view')\"},{\"aggregate\":null,\"column\":null,\"\
+  datasourceWarning\":false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"\
+  label\":\"CTR\",\"optionName\":\"metric_mbgla15hjd_ngfytorirvh\",\"sqlExpression\"\
+  :\"countIf(action='like') / countIf(action='view')\"},{\"aggregate\":null,\"column\"\
+  :null,\"datasourceWarning\":false,\"expressionType\":\"SQL\",\"hasCustomLabel\"\
+  :true,\"label\":\"\u041E\u0445\u0432\u0430\u0442\",\"optionName\":\"metric_lo5szy0q74_9l6riaibf9j\"\
+  ,\"sqlExpression\":\"uniqExact(user_id)\"}],\"orderby\":[[{\"aggregate\":null,\"\
+  column\":null,\"datasourceWarning\":false,\"expressionType\":\"SQL\",\"hasCustomLabel\"\
+  :true,\"label\":\"\u041B\u0430\u0439\u043A\u0438\",\"optionName\":\"metric_tgzfzbciy7_5x2anl9gima\"\
+  ,\"sqlExpression\":\"countIf(action='like')\"},false]],\"annotation_layers\":[],\"\
+  row_limit\":100,\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\"\
+  :{},\"custom_form_data\":{},\"post_processing\":[],\"time_offsets\":[]}],\"form_data\"\
+  :{\"datasource\":\"1__table\",\"viz_type\":\"table\",\"slice_id\":7,\"query_mode\"\
+  :\"aggregate\",\"groupby\":[\"post_id\"],\"temporal_columns_lookup\":{\"time\":true},\"\
+  metrics\":[{\"aggregate\":null,\"column\":null,\"datasourceWarning\":false,\"expressionType\"\
+  :\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u041B\u0430\u0439\u043A\u0438\",\"\
+  optionName\":\"metric_tgzfzbciy7_5x2anl9gima\",\"sqlExpression\":\"countIf(action='like')\"\
+  },{\"aggregate\":null,\"column\":null,\"datasourceWarning\":false,\"expressionType\"\
+  :\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u041F\u0440\u043E\u0441\u043C\u043E\
+  \u0442\u0440\u044B\",\"optionName\":\"metric_vm4nuvfqrno_5u1nt3lmrd\",\"sqlExpression\"\
+  :\"countIf(action='view')\"},{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"CTR\",\"optionName\"\
+  :\"metric_mbgla15hjd_ngfytorirvh\",\"sqlExpression\":\"countIf(action='like') /\
+  \ countIf(action='view')\"},{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
+  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"\u041E\u0445\
+  \u0432\u0430\u0442\",\"optionName\":\"metric_lo5szy0q74_9l6riaibf9j\",\"sqlExpression\"\
+  :\"uniqExact(user_id)\"}],\"all_columns\":[],\"percent_metrics\":[],\"adhoc_filters\"\
+  :[{\"clause\":\"WHERE\",\"subject\":\"time\",\"operator\":\"TEMPORAL_RANGE\",\"\
+  comparator\":\"No filter\",\"expressionType\":\"SIMPLE\"}],\"order_by_cols\":[],\"\
+  row_limit\":100,\"table_timestamp_format\":\"smart_date\",\"allow_render_html\"\
+  :true,\"show_cell_bars\":true,\"color_pn\":true,\"comparison_color_scheme\":\"Green\"\
+  ,\"comparison_type\":\"values\",\"extra_form_data\":{},\"dashboards\":[1],\"force\"\
+  :false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\":\"\
+  json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: 3aa995b2-5032-40fc-92c6-0734374dc2a7
+version: 1.0.0
+dataset_uuid: d658ec20-9b81-4129-b449-2d7666ad7cb6

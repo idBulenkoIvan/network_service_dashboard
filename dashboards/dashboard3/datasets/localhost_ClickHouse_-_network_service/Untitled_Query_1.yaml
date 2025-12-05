@@ -1,0 +1,77 @@
+table_name: Untitled Query 1
+main_dttm_col: activity_date
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: null
+schema: network_service
+sql: "WITH new_users AS (\n  SELECT first_date, uniqExact(user_id) AS new_users FROM\
+  \ (\n    SELECT user_id, MIN(toStartOfWeek(toDate(time))) AS first_date FROM feed_actions\
+  \ \n    GROUP BY user_id\n  ) t1\n  GROUP BY first_date\n),\n\ntotal_users AS (\n\
+  \  SELECT toStartOfWeek(time) AS activity_date, uniqExact(user_id) AS total_users\
+  \ FROM feed_actions \n  GROUP BY toStartOfWeek(time)\n),\n\ncumulative_new_users\
+  \ AS (\n  SELECT first_date, SUM(new_users) OVER (ORDER BY first_date ASC) AS cum_new_users\
+  \ FROM new_users\n),\n\ncumulative_total_users AS (\n  SELECT activity_date, SUM(total_users)\
+  \ OVER (ORDER BY activity_date ASC) AS cum_total_users FROM total_users\n)\n\nSELECT\
+  \ activity_date, (cum_total_users - cum_new_users) * 1.0 / cum_total_users AS old_users,\
+  \ \n       cum_new_users * 1.0 / cum_total_users AS new_users\nFROM cumulative_total_users\n\
+  JOIN cumulative_new_users ON cumulative_new_users.first_date = cumulative_total_users.activity_date\n\
+  ORDER BY activity_date ASC"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: eff80f48-0f38-465e-8d0b-d4c96128e6d0
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: old_users
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: new_users
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: Float64
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: activity_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: Date
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: babcb694-c583-4505-bad5-c1d355fb3f85

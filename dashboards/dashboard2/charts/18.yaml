@@ -1,0 +1,59 @@
+slice_name: "\u041E\u0431\u0449\u0435\u0435 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\
+  \u0442\u0432\u043E \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
+  \u0435\u0439, \u0432\u043E\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\
+  \u0432\u0448\u0438\u0445\u0441\u044F \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\
+  \u044F\u043C\u0438"
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 2__table
+  viz_type: big_number_total
+  metric:
+    expressionType: SQL
+    sqlExpression: uniqExact(user_id)
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"
+    optionName: metric_b215zq7pj2_j8aikpce4b
+  adhoc_filters:
+  - clause: WHERE
+    subject: time
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  subheader: Total message users
+  header_font_size: 0.5
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: "{\"datasource\":{\"id\":2,\"type\":\"table\"},\"force\":false,\"queries\"\
+  :[{\"filters\":[{\"col\":\"time\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
+  }],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\"\
+  :[],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"uniqExact(user_id)\"\
+  ,\"column\":null,\"aggregate\":null,\"datasourceWarning\":false,\"hasCustomLabel\"\
+  :true,\"label\":\"\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
+  \u0438\",\"optionName\":\"metric_b215zq7pj2_j8aikpce4b\"}],\"annotation_layers\"\
+  :[],\"series_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"\
+  custom_form_data\":{}}],\"form_data\":{\"datasource\":\"2__table\",\"viz_type\"\
+  :\"big_number_total\",\"metric\":{\"expressionType\":\"SQL\",\"sqlExpression\":\"\
+  uniqExact(user_id)\",\"column\":null,\"aggregate\":null,\"datasourceWarning\":false,\"\
+  hasCustomLabel\":true,\"label\":\"\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\
+  \u0442\u0435\u043B\u0438\",\"optionName\":\"metric_b215zq7pj2_j8aikpce4b\"},\"adhoc_filters\"\
+  :[{\"clause\":\"WHERE\",\"subject\":\"time\",\"operator\":\"TEMPORAL_RANGE\",\"\
+  comparator\":\"No filter\",\"expressionType\":\"SIMPLE\"}],\"subheader\":\"Total\
+  \ message users\",\"header_font_size\":0.5,\"subheader_font_size\":0.15,\"y_axis_format\"\
+  :\"SMART_NUMBER\",\"time_format\":\"smart_date\",\"conditional_formatting\":[],\"\
+  extra_form_data\":{},\"dashboards\":[2],\"force\":false,\"result_format\":\"json\"\
+  ,\"result_type\":\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: da10046f-47a3-45b2-8953-5c8d249c7b43
+version: 1.0.0
+dataset_uuid: fe8dd305-207f-4cb9-8e2a-3b59a67a7049
